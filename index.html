@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moeen Khan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #0a0a0f;
+            background-image:
+                radial-gradient(ellipse at 50% 0%, rgba(74, 55, 92, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 80%, rgba(30, 40, 80, 0.1) 0%, transparent 50%);
+            color: #e8dcc4;
+            font-family: 'Crimson Text', Georgia, serif;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 600px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', Georgia, serif;
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(212, 165, 69, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #a89b8c;
+            margin-bottom: 3rem;
+            font-style: italic;
+        }
+
+        .divider {
+            width: 120px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d4a545, transparent);
+            margin: 0 auto 3rem;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            color: #a89b8c;
+            margin-bottom: 1.5rem;
+        }
+
+        .game-link {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-family: 'Cinzel', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            color: #e8dcc4;
+            text-decoration: none;
+            background: linear-gradient(145deg, #2a2440 0%, #1a1525 100%);
+            border: 2px solid #d4a545;
+            border-radius: 4px;
+            box-shadow:
+                0 0 15px rgba(212, 165, 69, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .game-link:hover {
+            background: linear-gradient(145deg, #352d4d 0%, #252035 100%);
+            box-shadow:
+                0 0 25px rgba(212, 165, 69, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .game-link:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .game-link {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Moeen Khan</h1>
+        <p class="subtitle">Software Engineer</p>
+        <div class="divider"></div>
+        <p class="cta-text">Check out my game</p>
+        <a href="https://minedive.moeenkhan.dev" class="game-link">Play Minedive</a>
+    </div>
+</body>
+</html>
