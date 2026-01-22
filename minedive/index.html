@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minedive - A Dungeon Crawler Minesweeper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #0a0a0f;
+            background-image:
+                radial-gradient(ellipse at 50% 0%, rgba(74, 55, 92, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 80%, rgba(30, 40, 80, 0.1) 0%, transparent 50%);
+            color: #e8dcc4;
+            font-family: 'Crimson Text', Georgia, serif;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 600px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', Georgia, serif;
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(212, 165, 69, 0.3);
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: #a89b8c;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .divider {
+            width: 120px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d4a545, transparent);
+            margin: 0 auto 2rem;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: #c9baa6;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .feature {
+            background: rgba(42, 36, 64, 0.5);
+            border: 1px solid rgba(212, 165, 69, 0.3);
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            font-size: 0.95rem;
+            color: #d4a545;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .play-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-family: 'Cinzel', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            color: #e8dcc4;
+            text-decoration: none;
+            background: linear-gradient(145deg, #2a2440 0%, #1a1525 100%);
+            border: 2px solid #d4a545;
+            border-radius: 4px;
+            box-shadow:
+                0 0 15px rgba(212, 165, 69, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .play-btn:hover {
+            background: linear-gradient(145deg, #352d4d 0%, #252035 100%);
+            box-shadow:
+                0 0 25px rgba(212, 165, 69, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .play-btn:active {
+            transform: translateY(0);
+        }
+
+        .links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .link {
+            font-size: 0.95rem;
+            color: #a89b8c;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .link:hover {
+            color: #d4a545;
+        }
+
+        .back-home {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #6b6262;
+        }
+
+        .back-home a {
+            color: #8b7b7b;
+            text-decoration: none;
+        }
+
+        .back-home a:hover {
+            color: #a89b8c;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .play-btn {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+
+            .features {
+                gap: 0.6rem;
+            }
+
+            .feature {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Minedive</h1>
+        <p class="tagline">A Dungeon Crawler Minesweeper</p>
+        <div class="divider"></div>
+
+        <p class="description">
+            Descend through 10 floors of a cursed dungeon. Reveal cells, avoid mines,
+            collect gold, and buy items from the shop. How deep can you go?
+        </p>
+
+        <div class="features">
+            <span class="feature">10 Floors</span>
+            <span class="feature">Daily Challenges</span>
+            <span class="feature">Endless Mode</span>
+            <span class="feature">Item Shop</span>
+            <span class="feature">Leaderboards</span>
+        </div>
+
+        <div class="buttons">
+            <a href="https://minedive.moeenkhan.dev" class="play-btn">Play Now</a>
+            <div class="links">
+                <a href="https://play.google.com/store/apps/details?id=com.minedive.app" class="link">Google Play</a>
+                <a href="privacy.html" class="link">Privacy Policy</a>
+            </div>
+        </div>
+
+        <p class="back-home">A game by <a href="https://moeenkhan.dev">Mystic Games</a></p>
+    </div>
+</body>
+</html>
