@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - Minedive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #0a0a0f;
+            background-image:
+                radial-gradient(ellipse at 50% 0%, rgba(74, 55, 92, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 80%, rgba(30, 40, 80, 0.1) 0%, transparent 50%);
+            color: #e8dcc4;
+            font-family: 'Crimson Text', Georgia, serif;
+            padding: 2rem;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Cinzel', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(212, 165, 69, 0.3);
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #a89b8c;
+            margin-bottom: 2rem;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .divider {
+            width: 120px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d4a545, transparent);
+            margin: 0 auto 2rem;
+        }
+
+        h2 {
+            font-family: 'Cinzel', Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #d4a545;
+            margin: 1.5rem 0 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #c9baa6;
+        }
+
+        ol {
+            margin: 0.5rem 0 1rem 1.5rem;
+            color: #c9baa6;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #d4a545;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .email-link {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            margin: 1rem 0;
+            font-family: 'Cinzel', Georgia, serif;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: #e8dcc4;
+            text-decoration: none;
+            background: linear-gradient(145deg, #2a2440 0%, #1a1525 100%);
+            border: 2px solid #d4a545;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .email-link:hover {
+            background: linear-gradient(145deg, #352d4d 0%, #252035 100%);
+            text-decoration: none;
+        }
+
+        .data-list {
+            background: rgba(42, 36, 64, 0.3);
+            border: 1px solid rgba(212, 165, 69, 0.2);
+            border-radius: 4px;
+            padding: 1rem 1rem 1rem 2rem;
+            margin: 1rem 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: #a89b8c;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            body {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Delete Your Data</h1>
+        <p class="subtitle">Minedive</p>
+        <div class="divider"></div>
+
+        <p>You can request deletion of your Minedive account and associated data at any time.</p>
+
+        <h2>How to Request Deletion</h2>
+        <ol>
+            <li>Send an email to <a href="mailto:mysticgames.play@gmail.com">mysticgames.play@gmail.com</a></li>
+            <li>Include "Delete My Data" in the subject line</li>
+            <li>Include your in-game nickname so we can locate your data</li>
+        </ol>
+
+        <a href="mailto:mysticgames.play@gmail.com?subject=Delete%20My%20Data&body=Please%20delete%20my%20Minedive%20data.%0A%0AMy%20nickname%3A%20" class="email-link">Request Data Deletion</a>
+
+        <h2>What Data Will Be Deleted</h2>
+        <ul class="data-list">
+            <li>Your leaderboard scores</li>
+            <li>Your nickname and nickname claim</li>
+            <li>Your cloud sync data (game progress, unlocks)</li>
+            <li>Any data associated with your Play Games ID</li>
+        </ul>
+
+        <h2>Data Retention</h2>
+        <p>Once we receive your request, your data will be deleted within 30 days. Local data stored on your device (preferences, cached scores) can be cleared by uninstalling the app.</p>
+
+        <h2>What We Cannot Delete</h2>
+        <p>Anonymous analytics data that has already been aggregated cannot be individually deleted as it is not linked to your identity.</p>
+
+        <a href="./" class="back-link">← Back to Minedive</a>
+    </div>
+</body>
+</html>
